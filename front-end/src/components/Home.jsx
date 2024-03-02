@@ -1,8 +1,22 @@
+import { useDispatch, useSelector } from "react-redux";
 import styles from "../style";
 import { Navbar, Post, FriendsList } from "./index";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { useEffect } from "react";
+import { postsActions } from "../store/postSlice";
 
 function Home() {
+  const dispatch = useDispatch();
+  const postList = useSelector((state) => state.posts);
+
+  useEffect(() => {
+    // const controller = new AbortController();
+    // const signal = controller.signal;
+    fetch("http://localhost:8080/api/posts")
+      .then((res) => res.json())
+      .then((data) => dispatch(postsActions.fetchInitialPosts(data)));
+  }, [dispatch]);
+
   return (
     <>
       <Navbar />
@@ -60,9 +74,9 @@ function Home() {
             <div className="fixed  z-0 w-[100%] h-[60%] rounded-full blue__gradient"></div>
 
             <section className="flex flex-col gap-4 flex-1 px-10 z-[1]">
-              <Post />
-              <Post />
-              <Post />
+              {postList.map((item) => (
+                <Post key={item._id} post={item}></Post>
+              ))}
             </section>
 
             <aside className="hidden lg:flex flex-col p-4 rounded-lg z-[1] bg-black-gradient min-w-[300px] h-max lg:w-[350px] ">

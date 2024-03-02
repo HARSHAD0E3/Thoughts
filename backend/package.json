@@ -1,0 +1,38 @@
+{
+  "name": "thoughts",
+  "version": "1.0.0",
+  "description": "Server for social media app called Thoughts!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HARSHAD0E3/Thoughts.git"
+  },
+  "keywords": [
+    "MERN",
+    "Social",
+    "media",
+    "social",
+    "network",
+    "mongodb",
+    "reactjs",
+    "nodejs",
+    "expressjs",
+    "tailwind"
+  ],
+  "author": "Harshad Hadiya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.2.0",
+    "mysql": "^2.18.1",
+    "nanoid": "^5.0.6",
+    "nodemon": "^3.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/HARSHAD0E3/Thoughts/issues"
+  },
+  "homepage": "https://github.com/HARSHAD0E3/Thoughts#readme"
+}
