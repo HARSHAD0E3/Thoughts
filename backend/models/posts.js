@@ -2,28 +2,27 @@ const mongoose = require("mongoose");
 
 const postsSchema = new mongoose.Schema(
   {
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
     userName: {
       type: String,
-      require: true,
+      required: true,
     },
     title: {
       type: String,
-      require: true,
+      required: true,
     },
     body: {
       type: String,
-      require: true,
-    },
-    userId: {
-      type: String,
-      require: true,
-    },
-    tags: {
-      type: [String],
+      required: true,
+      max: 500,
     },
     reactions: {
       type: Number,
-      require: true,
+      default: 0,
     },
   },
   { timestamps: true }

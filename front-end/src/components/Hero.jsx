@@ -34,16 +34,16 @@ function Hero() {
           Social Network.
         </h1>
         <p className={`${styles.paragraph}`}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-          commodi iure, sequi sit impedit quod iusto adipisci amet, pariatur
-          maiores beatae
+          This is important to remember. Love isn&apos;t like pie. You
+          don&apos;t need to divide it among all your friends and loved ones. No
+          matter how much love you give, you can always give more.
         </p>
       </div>
       <div className="">
         <img
           src="/images/hero1.png"
           alt="hreo1"
-          className="w-full h-full relative z-10"
+          className="w-full h-full relative z-[2]"
         />
         <div className="w-[40%] h-[35%] absolute z-0 pink__gradient top-20 right-14" />
         <div className="w-[50%] h-[50%] absolute z-1 bottom-40 right-14 rounded-full white__gradient" />

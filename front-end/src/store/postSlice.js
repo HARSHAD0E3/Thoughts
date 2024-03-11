@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {} from "react-redux";
 
 const postSlice = createSlice({
   name: "posts",
@@ -8,6 +7,12 @@ const postSlice = createSlice({
     fetchInitialPosts: (state, action) => {
       return (state = action.payload.posts);
     },
+    // createPost: (state, action) => {
+    //   return state;
+    // },
+    // deletePost: (state, action) => {
+    //   return state;
+    // },
   },
 });
 
