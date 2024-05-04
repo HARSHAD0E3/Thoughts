@@ -43,7 +43,7 @@ function Home() {
           );
       })
       .catch(() => setError(true));
-  }, [dispatch, navigate]);
+  }, [dispatch, navigate, postList]);
 
   return (
     <>

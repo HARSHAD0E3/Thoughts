@@ -7,9 +7,9 @@ const postSlice = createSlice({
     fetchInitialPosts: (state, action) => {
       return (state = action.payload.posts);
     },
-    // createPost: (state, action) => {
-    //   return state;
-    // },
+    createPost: (state, action) => {
+      return state = [...state, action.payload.post];
+    },
     // deletePost: (state, action) => {
     //   return state;
     // },

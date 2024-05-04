@@ -6,13 +6,14 @@ function checkForAuthentication(req, res, next) {
   if (
     !authorizationHeaderValue ||
     !authorizationHeaderValue.startsWith("Bearer")
-  )
+  ) {
     return next();
+  }
 
   const token = authorizationHeaderValue.split("Bearer ")[1];
   const user = getUser(token);
   req.user = user;
   return next();
-} 
+}
 
 module.exports = { checkForAuthentication };

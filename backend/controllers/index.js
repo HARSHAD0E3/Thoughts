@@ -3,7 +3,7 @@ const Users = require("../models/users");
 
 async function handleGetAllPosts(req, res) {
   try {
-    const postList = await Posts.find({});
+    const postList = await Posts.find({}).sort({ createdAt: -1 });
     if (!postList) return res.json({ message: "No posts available!" });
     res.status(200).json({ posts: postList });
   } catch (error) {
